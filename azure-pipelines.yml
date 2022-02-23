@@ -13,7 +13,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  dotnetSdkVersion: '5.x'
+  
 steps:
 
 - task: DotNetCoreCLI@2
