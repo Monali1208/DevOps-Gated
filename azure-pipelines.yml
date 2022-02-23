@@ -13,7 +13,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-
+  dotnetSdkVersion: '5.x'
 steps:
 
 - task: DotNetCoreCLI@2
@@ -38,6 +38,7 @@ steps:
     projects: '**/*Tests/*Test*.csproj'
     arguments: '--configuration $(buildConfiguration) --collect:"XPlat Code Coverage" -- RunConfiguration.DisableAppDomain=true'
     workingDirectory: $(Build.SourcesDirectory)
+
 
 - task: DotNetCoreCLI@2
   inputs:
